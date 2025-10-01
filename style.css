@@ -210,7 +210,7 @@ input:checked + .slider:before {
 .menu-rodape {
   font-size: 14px;
   border-top: 1px solid rgba(255,255,255,0.3);
-  padding-top: 8px;
+  padding-top: 5px;
 }
 .menu-lateral .links {
   flex-grow: 1; /* 👈 faz os links ocuparem o espaço do meio */
