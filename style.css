@@ -148,7 +148,7 @@ input:checked + .slider:before {
   color: #fff;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* 👈 empurra o rodapé para baixo */
+  justify-content: flex-start; /* conteúdo normal em cima */
   padding: 20px;
   transition: left 0.4s ease;
   z-index: 1000;
@@ -208,11 +208,15 @@ input:checked + .slider:before {
 
 /* Rodapé do menu */
 .menu-rodape {
-  margin-top: auto; /* 👈 empurra sozinho para o final do menu */
   font-size: 14px;
   border-top: 1px solid rgba(255,255,255,0.3);
   padding-top: 10px;
 }
+.menu-lateral .links {
+  flex-grow: 1; /* 👈 faz os links ocuparem o espaço do meio */
+}
+
+
 
 /* BANNER */
 .banner {
