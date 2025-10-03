@@ -321,3 +321,186 @@ input:checked + .slider:before {
     align-items: center;
     gap: 8px;
 }
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body{
+  background:#f7f7f7;
+  color:#333;
+  line-height:1.6;
+}
+
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:20px;
+}
+
+/* Cabeçalho */
+header{
+  background:#004aad;
+  color:#fff;
+  padding:10px 0;
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
+
+.header-content{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.logo span{
+  font-weight:bold;
+  font-size:1.1rem;
+}
+
+nav a{
+  color:#fff;
+  margin-left:15px;
+  text-decoration:none;
+  font-weight:500;
+}
+
+nav a:hover{
+  text-decoration:underline;
+}
+
+/* Banner */
+.banner{
+  background:url('https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
+  color:#fff;
+  text-align:center;
+  padding:80px 20px;
+}
+
+.banner h1{
+  font-size:1.8rem;
+  margin-bottom:10px;
+}
+
+.banner-buttons .btn{
+  display:inline-block;
+  background:#004aad;
+  color:#fff;
+  padding:10px 15px;
+  border-radius:6px;
+  margin:5px;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+.banner-buttons .btn.destaque{
+  background:#00bfa5;
+}
+
+/* Notícias */
+.noticias .noticia{
+  background:#fff;
+  padding:15px;
+  margin:10px 0;
+  border-radius:8px;
+  box-shadow:0 1px 3px rgba(0,0,0,0.1);
+}
+
+.noticias .link{
+  display:inline-block;
+  margin-top:5px;
+  color:#004aad;
+  text-decoration:none;
+}
+
+/* Calendário */
+.calendario table{
+  width:100%;
+  border-collapse:collapse;
+  margin-top:10px;
+}
+
+.calendario th, .calendario td{
+  border:1px solid #ccc;
+  padding:8px;
+  text-align:left;
+}
+
+.ver-mais{
+  text-align:center;
+  margin-top:10px;
+}
+
+.btn{
+  background:#004aad;
+  color:#fff;
+  padding:8px 15px;
+  border-radius:5px;
+  text-decoration:none;
+}
+
+.btn:hover{
+  background:#003080;
+}
+
+/* Acesso rápido */
+.acesso-rapido .cards{
+  display:flex;
+  gap:15px;
+  flex-wrap:wrap;
+}
+
+.acesso-rapido .card{
+  flex:1;
+  min-width:200px;
+  background:#fff;
+  border-radius:8px;
+  padding:15px;
+  box-shadow:0 1px 3px rgba(0,0,0,0.1);
+  text-align:center;
+}
+
+/* Sobre */
+.sobre{
+  text-align:center;
+}
+
+/* Galeria */
+.galeria-fotos{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  justify-content:center;
+  margin-top:10px;
+}
+
+.foto{
+  background:#ddd;
+  padding:30px;
+  border-radius:8px;
+  min-width:200px;
+  text-align:center;
+}
+
+/* Contato */
+.contato p{
+  margin:5px 0;
+}
+
+.contato .redes a{
+  color:#004aad;
+  text-decoration:none;
+  margin:0 5px;
+}
+
+/* Rodapé */
+footer{
+  background:#004aad;
+  color:#fff;
+  text-align:center;
+  padding:15px;
+  margin-top:20px;
+}
