@@ -39,7 +39,6 @@ window.addEventListener('click', (e) => {
 
 // ---------- Usuário ----------
 const usuarioInfo = document.getElementById('usuarioInfo');
-
 function atualizarInterfaceUsuario() {
   const usuario = JSON.parse(localStorage.getItem('usuarioLogado'));
   const usuarioNome = document.getElementById('usuarioNome');
@@ -51,38 +50,32 @@ function atualizarInterfaceUsuario() {
     document.getElementById('usuarioInfo').innerHTML = `
       <strong>Nome:</strong> ${usuario.nome}<br>
       <strong>Login:</strong> ${usuario.login}<br>
-      <button id="logoutBtn" style="
-        margin-top:8px;
-        padding:6px 10px;
-        border:none;
-        border-radius:8px;
-        cursor:pointer;
-        background:#00bfa5;
-        color:#fff;
-      ">Sair</button>
+      <button id="logoutBtn" style="margin-top:8px; padding:6px 10px; border:none; border-radius:8px; cursor:pointer; background:#00bfa5; color:#fff;">Sair</button>
     `;
 
     document.getElementById('logoutBtn').addEventListener('click', () => {
       localStorage.removeItem('usuarioLogado');
       atualizarInterfaceUsuario();
     });
-
   } else {
     usuarioNome.textContent = '';
     document.getElementById('usuarioInfo').textContent = 'Não logado';
   }
 }
 
-
-
 // ---------- Cadastro ----------
 const formCadastro = document.getElementById('formCadastro');
 formCadastro.addEventListener('submit', (e) => {
   e.preventDefault();
+
   const nome = formCadastro[0].value.trim();
   const login = formCadastro[1].value.trim();
   const senha = formCadastro[2].value.trim();
-  if(!nome || !login || !senha){ alert('Preencha todos os campos'); return; }
+
+  if(!nome || !login || !senha){
+    alert('Preencha todos os campos');
+    return;
+  }
 
   let usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
   if(usuarios.some(u => u.login === login)){
@@ -90,10 +83,11 @@ formCadastro.addEventListener('submit', (e) => {
     return;
   }
 
-  const novoUsuario = {nome, login, senha};
+  const novoUsuario = { nome, login, senha };
   usuarios.push(novoUsuario);
   localStorage.setItem('usuarios', JSON.stringify(usuarios));
   localStorage.setItem('usuarioLogado', JSON.stringify(novoUsuario));
+
   modalCadastro.style.display = 'none';
   atualizarInterfaceUsuario();
 });
@@ -102,6 +96,7 @@ formCadastro.addEventListener('submit', (e) => {
 const formLogin = document.getElementById('formLogin');
 formLogin.addEventListener('submit', (e) => {
   e.preventDefault();
+
   const login = formLogin[0].value.trim();
   const senha = formLogin[1].value.trim();
 
