@@ -2,147 +2,116 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Escola Modelo do Saber</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sanico Teles</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<!-- 🧭 Cabeçalho -->
-<header>
-  <div class="container header-content">
-    <div class="logo">
-      🏫 <span>Escola Modelo do Saber</span>
+  <header>
+    <div class="menu-esquerda">
+      <svg class="menu-hamburguer" viewBox="0 0 21 14" id="abrirMenu">
+        <path d="M21,1.5H0V0h21V1.5z M21,5.5H0V7h21V5.5z M21,11H0v1.5h21V11z" />
+      </svg>
+      <div class="nome-escola">Escola Estadual Sanico Teles</div>
     </div>
-    <nav>
-      <a href="#">Início</a>
-      <a href="#">A Escola</a>
-      <a href="#">Calendário</a>
-      <a href="#">Alunos e Pais</a>
-      <a href="#">Professores</a>
-      <a href="#">Notícias</a>
-      <a href="#">Contato</a>
-    </nav>
-  </div>
-</header>
 
-<!-- 🖼️ Banner -->
-<section class="banner">
-  <div class="banner-text">
-    <h1>📚 Educação de qualidade para formar cidadãos conscientes.</h1>
+    <div class="menu-direita">
+      <div class="suporte">
+        <span class="icone-login" id="btnLogin">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 12c2.7 0 5-2.3 5-5s-2.3-5-5-5-5 2.3-5 5 2.3 5 5 5zm0 2c-3.3 0-10 1.7-10 5v3h20v-3c0-3.3-6.7-5-10-5z"/>
+          </svg>
+        </span>
+        <span id="usuarioNome" style="font-weight:bold; white-space:nowrap;"></span>
+      </div>
+
+      <label class="toggle-switch">
+        <input type="checkbox" id="temaToggle">
+        <span class="slider"></span>
+      </label>
+    </div>
+  </header>
+
+  <!-- MENU LATERAL -->
+  <div class="menu-lateral" id="menuLateral">
+    <div class="fechar-menu" id="fecharMenu">✖</div>
+    <h2>E. E. Sanico</h2>
+    <div class="links">
+      <a href="#pagina-escola">🏫 A Escola</a>
+      <a href="#pagina-eventos">📅 Eventos</a>
+      <a href="#pagina-noticias">📰 Notícias</a>
+      <a href="#pagina-areas">📚 Áreas</a>
+      <a href="#pagina-contato">📞 Contato</a>
+    </div>
+    <div class="menu-rodape" id="usuarioInfo">Não logado</div>
+  </div>
+
+  <!-- BANNER -->
+  <section class="banner">
+    <h2>📚 Educação de qualidade para formar cidadãos conscientes.</h2>
     <p>💡 Da Educação Infantil ao Ensino Médio, com projetos que transformam!</p>
-    <div class="banner-buttons">
-      <a href="#" class="btn">Conheça a Escola</a>
-      <a href="#" class="btn destaque">Matrículas Abertas</a>
+    <a class="btn" href="#">Conheça a Escola</a>
+    <a class="btn" href="#">Matrículas Abertas</a>
+  </section>
+
+  <!-- CONTEÚDO DAS PÁGINAS -->
+  <main>
+    <section id="pagina-escola" class="conteudo-pagina">
+      <h2>A Escola</h2>
+      <p>Aqui vão as informações sobre a escola, sua história, missão e valores.</p>
+    </section>
+
+    <section id="pagina-eventos" class="conteudo-pagina">
+      <h2>Eventos</h2>
+      <p>Veja os principais eventos escolares, feiras, apresentações e muito mais.</p>
+    </section>
+
+    <section id="pagina-noticias" class="conteudo-pagina">
+      <h2>Notícias</h2>
+      <p>Últimas notícias e comunicados da escola para alunos e responsáveis.</p>
+    </section>
+
+    <section id="pagina-areas" class="conteudo-pagina">
+      <h2>Áreas</h2>
+      <p>Informações sobre as áreas de conhecimento e disciplinas oferecidas.</p>
+    </section>
+
+    <section id="pagina-contato" class="conteudo-pagina">
+      <h2>Contato</h2>
+      <p>Endereço, telefone, formulário de contato e redes sociais.</p>
+    </section>
+  </main>
+
+  <!-- MODAIS LOGIN/CADASTRO -->
+  <div class="modal" id="modalLogin">
+    <div class="modal-content">
+      <h1>Login</h1>
+      <form id="formLogin">
+        <input type="text" placeholder="Usuário" required>
+        <input type="password" placeholder="Senha" required>
+        <button type="submit">Entrar</button>
+      </form>
+      <div class="register-link">
+        <p>Não tem conta? <a id="abrirCadastro">Cadastre-se</a></p>
+      </div>
     </div>
   </div>
-</section>
 
-<!-- 🗞️ Últimas Notícias -->
-<section class="noticias container">
-  <h2>🗞️ Fique por dentro das novidades</h2>
-
-  <div class="noticia">
-    <h3>📌 Feira de Ciências 2025 será no dia 10 de outubro!</h3>
-    <p>Alunos do 6º ao 9º ano apresentarão projetos sobre sustentabilidade.</p>
-    <a href="#" class="link">Leia mais →</a>
-  </div>
-
-  <div class="noticia">
-    <h3>📌 Novos uniformes já estão disponíveis</h3>
-    <p>Confira onde adquirir o novo modelo para 2026.</p>
-    <a href="#" class="link">Leia mais →</a>
-  </div>
-
-  <div class="ver-mais">
-    <a href="#" class="btn">Ver todas as notícias</a>
-  </div>
-</section>
-
-<!-- 📆 Calendário Escolar -->
-<section class="calendario container">
-  <h2>📆 Calendário Escolar</h2>
-  <table>
-    <tr>
-      <th>Data</th>
-      <th>Evento</th>
-    </tr>
-    <tr>
-      <td>10/10/2025</td>
-      <td>Feira de Ciências</td>
-    </tr>
-    <tr>
-      <td>15/10/2025</td>
-      <td>Dia dos Professores (recesso)</td>
-    </tr>
-    <tr>
-      <td>30/10/2025</td>
-      <td>Entrega de boletins 3º bimestre</td>
-    </tr>
-  </table>
-  <div class="ver-mais">
-    <a href="#" class="btn">Ver calendário completo</a>
-  </div>
-</section>
-
-<!-- 👨‍🏫 Acesso Rápido -->
-<section class="acesso-rapido container">
-  <h2>👨‍🏫 Acesso Rápido</h2>
-  <div class="cards">
-    <div class="card">
-      <h3>👩‍🎓 Área do Aluno</h3>
-      <p>Notas, boletins, tarefas</p>
-    </div>
-    <div class="card">
-      <h3>👨‍👩‍👧‍👦 Área dos Pais</h3>
-      <p>Acompanhamento escolar, mensagens</p>
-    </div>
-    <div class="card">
-      <h3>👩‍🏫 Área do Professor</h3>
-      <p>Planejamentos, diário de classe</p>
+  <div class="modal" id="modalCadastro">
+    <div class="modal-content">
+      <h1>Cadastro</h1>
+      <form id="formCadastro">
+        <input type="text" placeholder="Nome" required>
+        <input type="text" placeholder="Usuário" required>
+        <input type="password" placeholder="Senha" required>
+        <button type="submit">Cadastrar</button>
+      </form>
+      <div class="register-link">
+        <p>Já tem conta? <a id="abrirLogin">Entrar</a></p>
+      </div>
     </div>
   </div>
-</section>
 
-<!-- 🏫 Sobre a Escola -->
-<section class="sobre container">
-  <h2>🏫 Sobre a Escola</h2>
-  <p>Com mais de 30 anos de tradição, a Escola Modelo do Saber promove uma educação integral, baseada em valores, cidadania e inovação pedagógica.</p>
-  <a href="#" class="btn">Conheça nossa história</a>
-</section>
-
-<!-- 📸 Galeria de Fotos -->
-<section class="galeria container">
-  <h2>📸 Galeria de Fotos</h2>
-  <div class="galeria-fotos">
-    <div class="foto">🖼️ Festa Junina</div>
-    <div class="foto">🖼️ Semana da Leitura</div>
-    <div class="foto">🖼️ Jogos Internos</div>
-  </div>
-  <div class="ver-mais">
-    <a href="#" class="btn">Ver mais fotos</a>
-  </div>
-</section>
-
-<!-- 📞 Contato -->
-<section class="contato container">
-  <h2>📞 Contato</h2>
-  <p>📍 <strong>Endereço:</strong> Rua das Flores, 123 – Centro – Cidade/UF</p>
-  <p>📧 <strong>E-mail:</strong> contato@escolamodelo.edu.br</p>
-  <p>☎️ <strong>Telefone:</strong> (00) 1234-5678</p>
-  <p>🕒 <strong>Atendimento:</strong> Seg a Sex, das 7h às 17h</p>
-  <div class="redes">
-    📱 Siga-nos:
-    <a href="#">Facebook</a> |
-    <a href="#">Instagram</a> |
-    <a href="#">YouTube</a>
-  </div>
-</section>
-
-<!-- ⚠️ Rodapé -->
-<footer>
-  © 2025 Escola Modelo do Saber
-</footer>
-
+  <script src="script.js"></script>
 </body>
 </html>
